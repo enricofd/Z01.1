@@ -134,27 +134,26 @@ begin
 		b => nyout,
 		q => andout
 	);
-	
+
 	muxXY: Mux16 port map(
 		a => andout,
 		b => adderout,
 		sel => f,
 		q => muxout
 	);
---------------------------------------------------
-	inversorXY: inversor16 port map(
-		z => no, 
-		a => muxout,
-		y => precomp -- tem duas saidas ? 
-	);
---------------------------------------------------
+
+	inversorXY: inversor16 port map(            
+		z => no, 								
+		a => muxout,							
+		y => precomp 	
+	);											
+
 	comparadorXY: comparador16 port map(
 		a => precomp,
 		zr => zr,
 		ng => ng
 	);
 
-	-- saida <= ?
-
+	saida <= precomp
 
 end architecture;
