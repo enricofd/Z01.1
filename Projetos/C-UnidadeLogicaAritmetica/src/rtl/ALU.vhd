@@ -47,16 +47,18 @@ architecture  rtl OF alu is
   -- utilizados nesse modulo.
 
 	component zerador16 IS
-		port(z   : in STD_LOGIC;
-			 a   : in STD_LOGIC_VECTOR(15 downto 0);
-			 y   : out STD_LOGIC_VECTOR(15 downto 0)
-			);
+		port(
+			z   : in STD_LOGIC;
+			a   : in STD_LOGIC_VECTOR(15 downto 0);
+			y   : out STD_LOGIC_VECTOR(15 downto 0)
+		);
 	end component;
 
 	component inversor16 is
-		port(z   : in STD_LOGIC;
-			 a   : in STD_LOGIC_VECTOR(15 downto 0);
-			 y   : out STD_LOGIC_VECTOR(15 downto 0)
+		port(
+			z   : in STD_LOGIC;
+			a   : in STD_LOGIC_VECTOR(15 downto 0);
+			y   : out STD_LOGIC_VECTOR(15 downto 0)
 		);
 	end component;
 
@@ -64,7 +66,7 @@ architecture  rtl OF alu is
 		port(
 			a   :  in STD_LOGIC_VECTOR(15 downto 0);
 			b   :  in STD_LOGIC_VECTOR(15 downto 0);
-			q   : out STD_LOGIC_VECTOR(15 downto 0)
+			q   :  out STD_LOGIC_VECTOR(15 downto 0)
 		);
 	end component;
 
@@ -78,7 +80,7 @@ architecture  rtl OF alu is
 
 	component comparador16 is
 		port(
-			a   : in STD_LOGIC_VECTOR(15 downto 0);
+			a    : in STD_LOGIC_VECTOR(15 downto 0);
 			zr   : out STD_LOGIC;
 			ng   : out STD_LOGIC
     );
