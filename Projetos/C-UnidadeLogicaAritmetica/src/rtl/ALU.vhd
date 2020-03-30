@@ -11,7 +11,7 @@
 -- zx, nx, zy, ny, f, no.
 -- Também calcula duas saídas de 1 bit:
 -- Se a saída == 0, zr é definida como 1, senão 0;
--- Se a saída <0, ng é definida como 1, senão 0.
+-- Se a saída < 0, ng é definida como 1, senão 0.
 -- a ULA opera sobre os valores, da seguinte forma:
 -- se (zx == 1) então x = 0
 -- se (nx == 1) então x =! X
@@ -93,9 +93,68 @@ architecture  rtl OF alu is
 		);
 	end component;
 
+	-- signal existe para "ligar" as instancias. Ex: zyout esta associado a instancia zeradory e inversory
    SIGNAL zxout,zyout,nxout,nyout,andout,adderout,muxout,precomp: std_logic_vector(15 downto 0);
 
 begin
-  -- Implementação vem aqui!
+  
+ 	 -- <instance_name> : <component_name> port map(...)
+  	zeradorX: zerador16 port map (
+		z => zx,
+		a => x,
+		y => zxout
+	);
+
+	zeradorY: zerador16 port map(
+		z => zy,
+		a => y,
+		y => zyout
+	);
+
+	inversorX: inversor16 port map ( 
+		z => nx,
+		a => zxout,
+		y => nxout
+	);
+	
+	inversorY: inversor16 port map (
+		z => ny,
+		a => zyout,
+		y => nyout
+	);
+
+	adderXY: Add16 port map(
+		a => nxout,
+		b => nyout,
+		q => adderout
+	);
+
+	andXY: And16 port map(
+		a => nxout,
+		b => nyout,
+		q => andout
+	);
+	
+	muxXY: Mux16 port map(
+		a => andout,
+		b => adderout,
+		sel => f,
+		q => muxout
+	);
+--------------------------------------------------
+	inversorXY: inversor16 port map(
+		z => no, 
+		a => muxout,
+		y => precomp -- tem duas saidas ? 
+	);
+--------------------------------------------------
+	comparadorXY: comparador16 port map(
+		a => precomp,
+		zr => zr,
+		ng => ng
+	);
+
+	-- saida <= ?
+
 
 end architecture;
