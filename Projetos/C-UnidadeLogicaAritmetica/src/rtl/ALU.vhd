@@ -156,6 +156,6 @@ begin
 		ng => ng
 	);
 
-	saida <= precomp
+	saida <= precomp;
 
 end architecture;
