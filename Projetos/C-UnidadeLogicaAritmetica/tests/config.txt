@@ -9,4 +9,4 @@
 #inversor16.vhd
 zerador16.vhd
 #ALU.vhd
-  
+

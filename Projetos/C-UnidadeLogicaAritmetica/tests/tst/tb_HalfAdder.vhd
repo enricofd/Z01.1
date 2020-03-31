@@ -52,9 +52,9 @@ begin
 
     ---- Teste: 4
     ---- 1 + 1
-    --inA <= '1'; inB<= '1';
-    --wait for 200 ps;
-    --assert(soma = '0' and vaium = '1')  report "Falha em teste: 4" severity error;
+    inA <= '1'; inB<= '1';
+    wait for 200 ps;
+    assert(soma = '0' and vaium = '1')  report "Falha em teste: 4" severity error;
 
 
 
