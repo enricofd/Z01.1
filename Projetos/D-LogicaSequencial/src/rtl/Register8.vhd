@@ -26,6 +26,8 @@ architecture arch of Register8 is
 	end component;
 
 begin
+	
+	output <= input when load = '1' else output;
 
 
 end architecture;
