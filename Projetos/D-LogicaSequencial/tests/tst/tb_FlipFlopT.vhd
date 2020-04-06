@@ -39,19 +39,19 @@ begin
 
     -- IMPLEMENTE AQUI! D: 
     -- Teste: 0 
-    t <= '0'; 
-    wait until clk'event and clk='0';
-    assert(q = '0')  report "Falha em teste: 0" severity error;
-    assert(notq = '1')  report "Falha em teste: 0" severity error;
+    inT <= '0'; 
+    wait until inClock'event and inClock='0';
+    assert(outQ = '0')  report "Falha em teste: 0" severity error;
+    assert(outNOTQ = '1')  report "Falha em teste: 0" severity error;
 
     -- Teste: 1 
-    t <= '1'; 
-    wait until clk'event and clk='0';
-    assert(q = '1')  report "Falha em teste: 1" severity error;
-    assert(notq = '0')  report "Falha em teste: 1" severity error;
+    inT <= '1'; 
+    wait until inClock'event and inClock='0';
+    assert(outQ = '1')  report "Falha em teste: 1" severity error;
+    assert(outNOTQ = '0')  report "Falha em teste: 1" severity error;
 
     -- finish
-    wait until clk'event and clk='0';
+    wait until inClock'event and inClock='0';
     test_runner_cleanup(runner); -- Simulation ends here
 
 	wait;
