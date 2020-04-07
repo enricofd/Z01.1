@@ -33,21 +33,24 @@ begin
   begin
     test_runner_setup(runner, runner_cfg);
 
-    -- IMPLEMENTE AQUI!
+    -- TESTE 1
     wait until clk'event and clk='0';
-		assert(Q = "111")  report "Precisa fazer os testes" severity error;
+		assert(Q = "111")  report "Falha em teste 1" severity error;
+    -- TESTE 2
     wait until clk'event and clk='0';
-		assert(Q = "110")  report "Precisa fazer os testes" severity error;
+		assert(Q = "110")  report "Falha em teste 2" severity error;
+    -- TESTE 3
     wait until clk'event and clk='0';
-		assert(Q = "101")  report "Precisa fazer os testes" severity error;
+		assert(Q = "101")  report "Falha em teste 3" severity error;
+    -- TESTE 4
     wait until clk'event and clk='0';
-		assert(Q = "100")  report "Precisa fazer os testes" severity error;
+		assert(Q = "100")  report "Falha em teste 4" severity error;
+    -- TESTE 5
     wait until clk'event and clk='0';
-		assert(Q = "011")  report "Precisa fazer os testes" severity error;
+		assert(Q = "011")  report "Falha em teste 5" severity error;
+    -- TESTE 6
     wait until clk'event and clk='0';
-		assert(Q = "010")  report "Precisa fazer os testes" severity error;
-    wait until clk'event and clk='0';
-		assert(Q = "001")  report "Precisa fazer os testes" severity error;
+		assert(Q = "010")  report "Falha em teste 6" severity error;
 
 
     -- finish
