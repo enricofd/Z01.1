@@ -13,10 +13,10 @@ end entity;
 
 architecture arch of CounterDown is
 
-	signal q0: std_logic_vector(2 downto 0) := q;
+	signal q0: std_logic_vector(2 downto 0) := "000";
 
 begin
-	process(clock, q)
+	process(clock)
 		begin 
 			-- 000 001 010 011 100 101 110 111
 			if (rising_edge(clock)) then
