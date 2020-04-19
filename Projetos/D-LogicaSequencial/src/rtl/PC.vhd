@@ -43,14 +43,14 @@ architecture arch of PC is
 		);
 	end component;
 
-	component Register16 is
-		port(
-			clock: in  STD_LOGIC;
-			input: in  STD_LOGIC_VECTOR(15 downto 0);
-			 load: in  STD_LOGIC;
-		       output: out STD_LOGIC_VECTOR(15 downto 0)
-		);
-	end component; 
+  component Register16 is
+      port(
+          clock:   in STD_LOGIC;
+          input:   in STD_LOGIC_VECTOR(15 downto 0);
+          load:    in STD_LOGIC;
+          output: out STD_LOGIC_VECTOR(15 downto 0)
+        );
+    end component;
 
 	signal incout,q0,q1,q2,regout: STD_LOGIC_VECTOR(15 downto 0);
 
