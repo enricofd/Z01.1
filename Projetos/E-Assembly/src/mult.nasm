@@ -21,7 +21,7 @@ movw %D, (%A)
 ;Verificando se Ram[1] = 0
 leaw $1, %A
 movw (%A), %D
-leaw $41, %A
+leaw $END, %A
 je %D
 nop
 
@@ -41,12 +41,12 @@ movw %D, (%A)
 ;Verificando se Ram[2] = 0
 leaw $2, %A
 movw (%A), %D
-leaw $41, %A
+leaw $END, %A
 je %D
 nop
 
 ;Loop
-Loop:
+LOOP:
 leaw $4, %A
 movw (%A), %D
 leaw $0, %A
@@ -58,12 +58,12 @@ movw (%A), %D
 decw %D
 leaw $2, %A
 movw %D, (%A)
-leaw $27, %A
+leaw $LOOP, %A
 jg %D
 nop
 
 ;Ram[3] = Valor final
-End:
+END:
 leaw $4, %A
 movw (%A), %D
 leaw $3, %A
