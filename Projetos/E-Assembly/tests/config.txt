@@ -10,7 +10,8 @@
 # conceito C
 ##########################
 
-#add.nasm 1 1000
+
+add.nasm 1 1000
 #sub.nasm 1 1000
 #mov.nasm 1 1000
 #abs.nasm 2 1000
@@ -31,6 +32,6 @@ SWeLED.nasm 1 1000
 ###########################
 
 #isEven.nasm 2 1000
-#palindromo.nasm 2 1000
+palindromo.nasm 2 1000
 #LCDnomeGrupo.nasm 0 10000
 
