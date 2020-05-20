@@ -1,32 +1,33 @@
 {
   "aluno-1": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome": "Cicero Tiago Carneiro Valentim",
+    "email-insper": "cicerotcv@al.insper.edu.br",
+    "user-github": "cicerotcv"
   },
   "aluno-2": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome": "Enrico Damiani",
+    "email-insper": "enricofd@al.insper.edu.br",
+    "user-github": "enricofd"
   },
   "aluno-3": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome": "Lais Nascimento da Silva",
+    "email-insper": "laisns@al.insper.edu.br",
+    "user-github": "LaisNSilva"
   },
   "aluno-4": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome": "Luiz Felipe Lazzaron",
+    "email-insper": "luizfl@al.insper.edu.br",
+    "user-github": "luizfelipelazzaron"
   },
   "aluno-5": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome": "Marcos Vinicius da Silva",
+    "email-insper": "marcosvs3@al.insper.edu.br",
+    "user-github": "marcosvds"
   },
   "aluno-6": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome": "Thalia Loiola",
+    "email-insper": "thalials@al.insper.edu.br",
+    "user-github": "thalials"
+  
   }
 }

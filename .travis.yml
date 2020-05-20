@@ -17,7 +17,7 @@ jdk:
 # linguagens de desenvolvimento utilizada no build
 language: python
 python:
-  - '3.5'
+  - '3.6'
 # command to install dependencies
 install:
   - pip install -r requirements.txt
@@ -51,3 +51,10 @@ script:
   ## run scripts
   - python3 Projetos/A-AmbienteDesenvolvimento/testeAmbienteDesenvolvimento.py
   - python3 Projetos/B-LogicaCombinacional/testeLogicaCombinacional.py
+  - python3 Projetos/C-UnidadeLogicaAritmetica/testeULA.py
+  - python3 Projetos/D-LogicaSequencial/testeLogicaSequencial.py
+  - python3 Projetos/E-Assembly/testeAssembly.py
+  - python3 Projetos/F-Computador/testeHW.py
+  - python3 Projetos/F-Computador/testeAssemblyMyCPU.py
+
+
